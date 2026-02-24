@@ -85,17 +85,24 @@ export const HeroSection = () => {
           transition={{ delay: 1 }}
           className="mt-8 max-w-sm"
         >
-          <p className="font-['Outfit'] text-lg font-light leading-relaxed tracking-tight text-[#EAEAEA]/80">
+          <p
+            className="font-['Outfit'] text-center lg:text-start text-lg font-light 
+          leading-relaxed tracking-tight text-[#EAEAEA]/80"
+          >
             Forging African heritage into structured silhouettes. A dialogue
             between raw textile and refined architecture.
           </p>
-          <div className="mt-10">
+          <div className="w-full md:w-fit text-center lg:text-start mt-5 md:mt-10">
             <a
-              href="#"
-              className="group font-['Space_Mono'] text-[11px] uppercase tracking-widest inline-block text-[#EAEAEA]"
+              href="#collection"
+              className="group font-['Space_Mono'] text-[11px] uppercase tracking-widest 
+              inline-block text-[#EAEAEA]"
             >
               View the Collection
-              <div className="h-[1px] w-full bg-[#D4AF37] mt-1 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+              <div
+                className="h-[1px] w-full bg-[#D4AF37] mt-1 scale-x-0 group-hover:scale-x-100 
+              transition-transform origin-left duration-500"
+              />
             </a>
           </div>
         </motion.div>

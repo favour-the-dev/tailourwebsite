@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const TestimonialsSection = () => {
   const testimonials = [
@@ -10,28 +11,58 @@ export const TestimonialsSection = () => {
       q: "The new standard for the modern African dandy.",
       a: "Bespoke Quarterly",
     },
+    {
+      q: "Tailoring that speaks a language of heritage and future.",
+      a: "Vogue Africa",
+    },
+    {
+      q: "Impeccable structure meets fluid storytelling.",
+      a: "GQ Style",
+    }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
   return (
-    <section className="py-20 lg:py-40 px-6 lg:px-12 border-t border-[#EAEAEA]/10 bg-[#0A0A0A] text-[#EAEAEA]">
-      <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              className="py-16 border-b border-[#EAEAEA]/10 flex flex-col md:flex-row justify-between items-start group hover:bg-[#EAEAEA]/5 transition-colors duration-500 px-4"
-            >
-              <blockquote className="font-['Instrument_Serif'] italic text-5xl md:text-7xl max-w-2xl leading-tight">
-                "{t.q}"
-              </blockquote>
-              <cite className="font-['Space_Mono'] text-[10px] uppercase tracking-[0.4em] mt-8 md:mt-0 opacity-50 oldstyle-nums group-hover:text-[#D4AF37] transition-colors">
-                — {t.a}
-              </cite>
-            </motion.div>
+    <section className="py-24 lg:py-48 px-6 lg:px-12 border-t border-[#EAEAEA]/10 bg-[#0A0A0A] text-[#EAEAEA] relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#D4AF37_0.5px,transparent_0.5px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto min-h-[400px] flex flex-col justify-center relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="flex flex-col items-center text-center"
+          >
+            <blockquote className="font-['Instrument_Serif'] italic text-4xl md:text-6xl lg:text-7xl max-w-4xl leading-tight mb-12">
+              "{testimonials[currentIndex].q}"
+            </blockquote>
+            <cite className="font-['Space_Mono'] text-xs md:text-sm uppercase tracking-[0.3em] text-[#D4AF37] opacity-80 not-italic">
+              — {testimonials[currentIndex].a}
+            </cite>
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="flex justify-center gap-4 mt-16">
+          {testimonials.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`h-[2px] transition-all duration-300 ${
+                currentIndex === idx ? "w-12 bg-[#D4AF37]" : "w-4 bg-[#EAEAEA]/20 hover:bg-[#EAEAEA]/40"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
           ))}
         </div>
       </div>

@@ -8,16 +8,25 @@ export const Navbar = () => {
     <>
       <nav className="fixed top-0 w-full z-50 p-6 flex justify-between items-center mix-blend-difference text-[#EAEAEA] pointer-events-none">
         <div className="font-['Space_Mono'] text-[10px] tracking-[0.3em] uppercase pointer-events-auto">
-          Lagos // London
+          <a href="/">Ibe clothing</a>
         </div>
         <div className="gap-8 font-['Space_Mono'] text-[10px] uppercase tracking-widest hidden md:flex pointer-events-auto">
-          <a href="#" className="hover:text-[#D4AF37] transition-colors">
+          <a
+            href="/#collection"
+            className="hover:text-[#D4AF37] transition-colors"
+          >
             The Collection
           </a>
-          <a href="#" className="hover:text-[#D4AF37] transition-colors">
+          <a
+            href="/#process"
+            className="hover:text-[#D4AF37] transition-colors"
+          >
             The Process
           </a>
-          <a href="#" className="hover:text-[#D4AF37] transition-colors">
+          <a
+            href="/book-a-fitting"
+            className="hover:text-[#D4AF37] transition-colors"
+          >
             Book a Fitting
           </a>
         </div>

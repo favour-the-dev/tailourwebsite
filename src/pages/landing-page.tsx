@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { HeroSection } from "@/components/landing/hero-section";
 import { CatalogSection } from "@/components/landing/catalog-section";
+import { ProcessSection } from "@/components/landing/process.tsx";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { Footer } from "@/components/layout/footer";
 
@@ -10,6 +11,7 @@ export default function LandingPage() {
       <Navbar />
       <HeroSection />
       <CatalogSection />
+      <ProcessSection />
       <TestimonialsSection />
       <Footer />
     </div>
