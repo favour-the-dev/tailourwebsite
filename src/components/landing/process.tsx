@@ -42,6 +42,13 @@ export const ProcessSection = () => {
               From concept to creation, our bespoke tailored experience is
               designed around precision, personalization, and timeless craft.
             </p>
+            <button
+              className="bg-[#D4AF37] text-black px-8 py-3 lg:px-12 lg:py-4 
+            font-['Space_Mono'] text-[12px] uppercase tracking-[0.2em] hover:bg-white 
+            transition-colors cursor-pointer w-full md:w-auto mt-8"
+            >
+              Book A Fitting
+            </button>
           </div>
           <div className="hidden md:block">
             <div className="w-full h-[1px] bg-[#D4AF37]/30 mb-8" />

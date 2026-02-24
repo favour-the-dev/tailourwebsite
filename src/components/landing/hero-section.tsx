@@ -31,7 +31,6 @@ export const HeroSection = () => {
         className="absolute inset-0 z-0 opacity-20 pointer-events-none 
       bg-[radial-gradient(#D4AF37_0.5px,transparent_0.5px)] [background-size:32px_32px]"
       />
-
       {/* Animated Particles */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <SparklesCore
@@ -44,7 +43,6 @@ export const HeroSection = () => {
           particleColor="#D4AF37"
         />
       </div>
-
       {/* Left Column: Text-on-Image Overlap */}
       <div className="col-span-12 lg:col-span-5 flex flex-col justify-center px-6 lg:px-12 z-20 pt-20 lg:pt-0">
         <div className="overflow-visible h-[14vw] lg:h-[12rem] flex items-center">
@@ -92,10 +90,13 @@ export const HeroSection = () => {
             Forging African heritage into structured silhouettes. A dialogue
             between raw textile and refined architecture.
           </p>
-          <div className="w-full md:w-fit text-center lg:text-start mt-5 md:mt-10">
+          <div
+            className="w-full md:w-fit text-center lg:text-start mt-5 md:mt-10 
+          flex flex-col md:flex-row items-center gap-3 md:gap-6"
+          >
             <a
               href="#collection"
-              className="group font-['Space_Mono'] text-[11px] uppercase tracking-widest 
+              className="group font-['Space_Mono'] text-[12px] uppercase tracking-widest 
               inline-block text-[#EAEAEA]"
             >
               View the Collection
@@ -104,10 +105,20 @@ export const HeroSection = () => {
               transition-transform origin-left duration-500"
               />
             </a>
+            <a
+              href="#collection"
+              className="group font-['Space_Mono'] text-[12px] uppercase tracking-widest 
+              inline-block text-[#D4AF37]"
+            >
+              Book A Fitting
+              <div
+                className="h-[1px] w-full bg-[#EAEAEA] mt-1 scale-x-0 group-hover:scale-x-100 
+              transition-transform origin-left duration-500"
+              />
+            </a>
           </div>
         </motion.div>
       </div>
-
       {/* Right Column: Large Offset Image Grid (Ref: Visa) */}
       <div className="col-span-12 lg:col-span-7 h-[50vh] lg:h-full relative p-6 lg:p-12">
         <div className="relative w-full h-full group">
