@@ -1,6 +1,9 @@
 export const Footer = () => {
   return (
-    <footer className="bg-[#0A0A0A] text-[#EAEAEA] p-6 lg:p-12 lg:h-[60vh] flex flex-col justify-between border-t border-[#EAEAEA]/10">
+    <footer
+      className="bg-[#0A0A0A] text-[#EAEAEA] p-8 lg:px-12 lg:py-16 lg:h-[70vh] 
+    flex flex-col justify-between border-t border-[#EAEAEA]/10"
+    >
       <div className="grid grid-cols-12 w-full">
         <div className="col-span-12 lg:col-span-6">
           <h2 className="font-['Instrument_Serif'] italic text-[10vw] tracking-tighter leading-none text-[#F5F5F7]">

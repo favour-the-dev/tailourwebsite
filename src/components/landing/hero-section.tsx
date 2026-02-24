@@ -21,10 +21,16 @@ export const HeroSection = () => {
   }, [titleNumber, fashionTerms]);
 
   return (
-    <section className="relative min-h-screen grid grid-cols-12 gap-0 overflow-hidden bg-[#0A0A0A] text-[#EAEAEA]">
+    <section
+      className="relative min-h-screen grid grid-cols-12 gap-0 overflow-hidden 
+    bg-[#0A0A0A] text-[#EAEAEA] py-6"
+    >
       {/* Background Sparkles - Gold Dust */}
       {/* Manual Grid Effect reused from reference for structure */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[radial-gradient(#D4AF37_0.5px,transparent_0.5px)] [background-size:32px_32px]" />
+      <div
+        className="absolute inset-0 z-0 opacity-20 pointer-events-none 
+      bg-[radial-gradient(#D4AF37_0.5px,transparent_0.5px)] [background-size:32px_32px]"
+      />
 
       {/* Animated Particles */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
@@ -43,7 +49,7 @@ export const HeroSection = () => {
       <div className="col-span-12 lg:col-span-5 flex flex-col justify-center px-6 lg:px-12 z-20 pt-20 lg:pt-0">
         <div className="overflow-visible h-[14vw] lg:h-[12rem] flex items-center">
           <h1
-            className="font-['Instrument_Serif'] italic text-[15vw] 
+            className="font-['Instrument_Serif'] italic text-[20vw] 
           lg:text-[10rem] leading-[0.8] tracking-tighter relative w-full"
           >
             <span className="opacity-0 invisible">Placeholder</span>{" "}
@@ -88,7 +94,7 @@ export const HeroSection = () => {
               href="#"
               className="group font-['Space_Mono'] text-[11px] uppercase tracking-widest inline-block text-[#EAEAEA]"
             >
-              View the Lookbook
+              View the Collection
               <div className="h-[1px] w-full bg-[#D4AF37] mt-1 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
             </a>
           </div>
@@ -97,12 +103,18 @@ export const HeroSection = () => {
 
       {/* Right Column: Large Offset Image Grid (Ref: Visa) */}
       <div className="col-span-12 lg:col-span-7 h-[50vh] lg:h-full relative p-6 lg:p-12">
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full group">
+          {/* rotaed  box behind */}
+          <div
+            className="absolute top-0 right-[3px] w-full lg:w-[75%] h-full border-2 border-[#D4AF37] 
+          rotate-10 origin-center transition-all duration-1000 group-hover:rotate-0"
+          />
           <motion.div
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5 }}
-            className="absolute lg:right-0 top-0 w-full lg:w-3/4 h-full lg:h-[80vh] grayscale hover:grayscale-0 transition-all duration-1000 group overflow-hidden"
+            className="absolute lg:right-0 top-0 w-full lg:w-3/4 h-full lg:h-[80vh] 
+             transition-all duration-1000 group overflow-hidden"
           >
             <img
               src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80"
