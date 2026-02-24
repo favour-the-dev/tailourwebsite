@@ -18,7 +18,7 @@ export const TestimonialsSection = () => {
     {
       q: "Impeccable structure meets fluid storytelling.",
       a: "GQ Style",
-    }
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,7 +33,7 @@ export const TestimonialsSection = () => {
   return (
     <section className="py-24 lg:py-48 px-6 lg:px-12 border-t border-[#EAEAEA]/10 bg-[#0A0A0A] text-[#EAEAEA] relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#D4AF37_0.5px,transparent_0.5px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
-      
+
       <div className="max-w-6xl mx-auto min-h-[400px] flex flex-col justify-center relative">
         <AnimatePresence mode="wait">
           <motion.div
@@ -59,7 +59,9 @@ export const TestimonialsSection = () => {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`h-[2px] transition-all duration-300 ${
-                currentIndex === idx ? "w-12 bg-[#D4AF37]" : "w-4 bg-[#EAEAEA]/20 hover:bg-[#EAEAEA]/40"
+                currentIndex === idx
+                  ? "w-12 bg-[#D4AF37]"
+                  : "w-4 bg-[#EAEAEA]/20 hover:bg-[#EAEAEA]/40"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
