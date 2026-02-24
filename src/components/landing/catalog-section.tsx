@@ -1,22 +1,7 @@
 import { motion } from "framer-motion";
+import { seriesSamples } from "@/lib/mock/data";
 
 export const CatalogSection = () => {
-  const images = [
-    "/assets/catalogue/catalogue-1.png",
-    "/assets/catalogue/catalogue-2.png",
-    "/assets/catalogue/catalogue-3.png",
-    "/assets/catalogue/catalogue-4.png",
-    "/assets/catalogue/catalogue-5.png",
-    "/assets/catalogue/catalogue-6.png",
-    "/assets/catalogue/catalogue-7.jpg",
-    "/assets/catalogue/catalogue-8.png",
-    "/assets/catalogue/catalogue-9.jpg",
-    "/assets/catalogue/catalogue-10.png",
-    "/assets/catalogue/catalogue-11.png",
-    "/assets/catalogue/catalogue-12.png",
-    "/assets/catalogue/catalogue-13.png",
-  ];
-
   return (
     <section
       id="collection"
@@ -31,31 +16,38 @@ export const CatalogSection = () => {
             See our collection of beskpoke African centered clothing series that
             suit all fashion styles and preferences.
           </p>
+          <button
+            className="mt-8 border-2 border-[#0A0A0A] px-8 py-4 lg:px-16 lg:py-5 
+          font-['Space_Mono'] text-[12px] uppercase tracking-[0.25em] hover:bg-white 
+          hover:text-black transition-all duration-300 cursor-pointer"
+          >
+            Book A Fitting
+          </button>
         </div>
 
         {/* Vertical Split Panes */}
-        {images.map((imageSrc, index) => (
+        {seriesSamples.map((sample) => (
           <motion.div
-            key={index}
+            key={sample.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
+            transition={{ duration: 0.4, delay: sample.id * 0.05 }}
             className="col-span-10 sm:col-span-12 md:col-span-6 lg:col-span-4 group cursor-crosshair"
           >
             <div className="aspect-[1/1] md:aspect-[8/9] lg:aspect-[4/5] overflow-hidden transition-all duration-700">
               <img
-                src={imageSrc}
+                src={sample.imageUrl}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
                 alt="Archive piece"
               />
             </div>
             <div className="mt-6 flex justify-between items-baseline border-b border-black/10 pb-4">
               <span className="font-['Space_Mono'] text-[10px] uppercase">
-                Series {index + 1}
+                {sample.series}
               </span>
-              <span className="font-['Instrument_Serif'] italic text-2xl">
-                Refined Structure
+              <span className="font-['Instrument_Serif'] italic text-xl sm:text-2xl">
+                {sample.name}
               </span>
             </div>
           </motion.div>

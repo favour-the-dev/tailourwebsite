@@ -81,18 +81,18 @@ export const HeroSection = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1 }}
-          className="mt-8 max-w-sm"
+          className="mt-8 max-w-md mx-auto lg:mx-0"
         >
           <p
-            className="font-['Outfit'] text-center lg:text-start text-lg font-light 
+            className="w-full lg:w-fit font-['Outfit'] text-center lg:text-start text-lg font-light 
           leading-relaxed tracking-tight text-[#EAEAEA]/80"
           >
             Forging African heritage into structured silhouettes. A dialogue
             between raw textile and refined architecture.
           </p>
           <div
-            className="w-full md:w-fit text-center lg:text-start mt-5 md:mt-10 
-          flex flex-col md:flex-row items-center gap-3 md:gap-6"
+            className="w-full lg:w-fit text-center lg:text-start mt-5 md:mt-10 
+          flex flex-col lg:flex-row items-center gap-3 md:gap-6"
           >
             <a
               href="#collection"
