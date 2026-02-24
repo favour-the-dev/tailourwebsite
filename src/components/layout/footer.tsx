@@ -12,7 +12,7 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between items-end gap-8 mt-12 lg:mt-0">
         <div className="font-['Space_Mono'] text-[9px] uppercase tracking-widest opacity-40">
-          Design by Studio Onyx // 2026
+          Design by Favour Odili // 2026
         </div>
         <button className="bg-[#D4AF37] text-black px-12 py-4 font-['Space_Mono'] text-[10px] uppercase tracking-[0.2em] hover:bg-white transition-colors cursor-pointer">
           Book Appointment
