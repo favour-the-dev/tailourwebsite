@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { CatalogSection } from "@/components/landing/catalog-section";
 import { ProcessSection } from "@/components/landing/process.tsx";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { CTASection } from "@/components/landing/cta-section";
 import { Footer } from "@/components/layout/footer";
 
 export default function LandingPage() {
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <CatalogSection />
       <ProcessSection />
       <TestimonialsSection />
+      <CTASection />
       <Footer />
     </div>
   );

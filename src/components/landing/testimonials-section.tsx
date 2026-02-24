@@ -35,6 +35,12 @@ export const TestimonialsSection = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#D4AF37_0.5px,transparent_0.5px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto min-h-[400px] flex flex-col justify-center relative">
+        <h2
+          className="font-['Space_Mono'] text-md md:text-lg text-center mb-12 tracking-[0.3em] 
+          text-[#D4AF37] uppercase opacity-80"
+        >
+          TESTIMONIALS
+        </h2>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -47,7 +53,10 @@ export const TestimonialsSection = () => {
             <blockquote className="font-['Instrument_Serif'] italic text-4xl md:text-6xl lg:text-7xl max-w-4xl leading-tight mb-12">
               "{testimonials[currentIndex].q}"
             </blockquote>
-            <cite className="font-['Space_Mono'] text-xs md:text-sm uppercase tracking-[0.3em] text-[#D4AF37] opacity-80 not-italic">
+            <cite
+              className="font-['Space_Mono'] text-xs md:text-sm uppercase 
+            tracking-[0.3em] text-[#D4AF37] opacity-80 not-italic"
+            >
               — {testimonials[currentIndex].a}
             </cite>
           </motion.div>
