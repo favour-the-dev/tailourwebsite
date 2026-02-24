@@ -1,5 +1,3 @@
-import React from "react";
-
 export const CTASection = () => {
   return (
     <section className="bg-[#D4AF37] text-[#0A0A0A] py-32 px-6 lg:px-12 flex flex-col items-center justify-center text-center">

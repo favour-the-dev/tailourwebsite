@@ -8,7 +8,10 @@ import { Footer } from "@/components/layout/footer";
 
 export default function LandingPage() {
   return (
-    <div className="bg-[#0A0A0A] min-h-screen selection:bg-[#D4AF37] selection:text-black scroll-smooth">
+    <div
+      className="bg-[#0A0A0A] min-h-screen selection:bg-[#D4AF37] selection:text-black 
+    scroll-smooth"
+    >
       <Navbar />
       <HeroSection />
       <CatalogSection />
