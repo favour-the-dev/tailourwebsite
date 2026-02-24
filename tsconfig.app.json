@@ -24,8 +24,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    // ignore deprecations
-    "ignoreDeprecations": "6.0",
+    // // ignore deprecations
+    // "ignoreDeprecations": "6.0",
 
     // shadcn
     "baseUrl": ".",
